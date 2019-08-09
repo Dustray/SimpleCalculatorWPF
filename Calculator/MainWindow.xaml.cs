@@ -28,7 +28,46 @@ namespace Calculator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var btn = sender as Button;
+            //  ElementController(btn, btn.Tag.ToString());
+            var tag = btn.Tag.ToString();
+            var num = int.Parse(tag.Substring( tag.Length - 1, 1));
+            //MessageBox.Show(num);
+            Show(num+"");
+        }
+
+        private void Show(string message)
+        {
+            ShowText.Text += message;
+        }
+        private void ShowLine(string message)
+        {
+            ShowText.Text += "\n" + message+"\n";
+        }
+
+        private void OperateAddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShowLine("+");
+        }
+
+        private void OperateSubtractBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShowLine("-");
+        }
+
+        private void OperateMultiBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShowLine("*");
+        }
+
+        private void OperateDivideBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ShowLine("/");
+        }
+        private void OperateEquelBtn_Click(object sender, RoutedEventArgs e)
+        {
 
         }
+
     }
 }
