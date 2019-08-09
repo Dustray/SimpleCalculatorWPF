@@ -1,0 +1,2 @@
+# SimpleCalculatorWPF
+为学习命令模式和WPF创建的简易计算器
